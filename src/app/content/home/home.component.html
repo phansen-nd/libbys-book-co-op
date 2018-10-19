@@ -1,0 +1,5 @@
+<ul>
+  <li class="text" *ngFor="let book of books | async">
+    {{book.name}} by {{book.author}}
+  </li>
+</ul>

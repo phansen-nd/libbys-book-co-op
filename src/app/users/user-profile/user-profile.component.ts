@@ -10,12 +10,7 @@ import { Observable } from 'rxjs'
 })
 export class UserProfileComponent implements OnInit {
 
-  books: Observable<any[]>;
+  constructor(public authService: AuthService) { }
 
-  constructor(public authService: AuthService, afs: AngularFirestore) {
-    this.books = afs.collection('books').valueChanges();
-  }
-
-  ngOnInit() {
-  }
+  ngOnInit() { }
 }
