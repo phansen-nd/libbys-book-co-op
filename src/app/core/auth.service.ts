@@ -6,12 +6,15 @@ import * as firebase from 'firebase/app'
 import { Router } from '@angular/router'
 import { Observable, of } from 'rxjs'
 import { switchMap } from 'rxjs/operators'
+import { Book } from '../objects/book';
 
 interface User {
   uid: String;
   email: String;
   photoURL?: String;
   displayName?: String;
+  currentBook?: Book;
+  favoriteBook?: Book;
 }
 
 @Injectable({
@@ -53,6 +56,7 @@ export class AuthService {
   private updateUserData(user: User) {
     const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`)
 
+    // Only update values of User that social accounts may have (not book details)
     const data: User = {
       uid: user.uid,
       email: user.email,

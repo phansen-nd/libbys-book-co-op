@@ -12,6 +12,9 @@ import { UserProfileComponent } from './users/user-profile/user-profile.componen
 import { AuthService } from './core/auth.service';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './content/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatButtonModule } from '@angular/material'
 
 
 @NgModule({
@@ -26,7 +29,9 @@ import { HomeComponent } from './content/home/home.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [
     AuthService
