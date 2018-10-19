@@ -1,0 +1,7 @@
+<div *ngIf="!(authService.user | async); else alreadyLoggedIn">
+  <button (click)="signInWithGoogle()">Sign-in with Google</button>
+</div>
+
+<ng-template #alreadyLoggedIn>
+  You are already logged in.
+</ng-template>

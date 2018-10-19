@@ -1,0 +1,11 @@
+<ul>
+    <li class="text" *ngFor="let book of books | async">
+        {{book.name}} by {{book.author}}
+    </li>
+</ul>
+<div *ngIf="authService.user | async as user">
+    <p>Welcome, {{user.displayName}}!</p>
+    <img [src]="user.photoURL">
+    <p>ID: {{user.uid}}</p>
+    <button (click)="authService.signOut()">Sign Out</button>
+</div>

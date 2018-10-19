@@ -8,8 +8,5 @@ import { Observable } from 'rxjs'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  books: Observable<any[]>;
-  constructor(db: AngularFirestore) {
-    this.books = db.collection('books').valueChanges();
-  }
+  
 }
