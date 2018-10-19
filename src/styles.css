@@ -3,3 +3,7 @@
     font-family: 'bookerly';
     src: url('assets/fonts/Bookerly/Bookerly-Regular.ttf');
 }
+
+html {
+    font-family: 'bookerly';
+}
