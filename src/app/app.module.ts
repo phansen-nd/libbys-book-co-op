@@ -14,7 +14,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './content/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatButtonModule } from '@angular/material'
+import { MatButtonModule, MatAutocompleteModule, MatChipsModule, 
+  MatFormFieldModule, MatIconModule, MatInputModule } from '@angular/material'
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { MatButtonModule } from '@angular/material'
     AngularFirestoreModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule, MatAutocompleteModule, MatChipsModule, MatIconModule, MatInputModule, MatFormFieldModule
   ],
   providers: [
     AuthService
