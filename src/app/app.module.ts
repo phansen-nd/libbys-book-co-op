@@ -14,8 +14,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './content/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatButtonModule, MatAutocompleteModule, MatChipsModule, 
-  MatFormFieldModule, MatIconModule, MatInputModule } from '@angular/material'
+import { MatButtonModule, MatAutocompleteModule, 
+  MatFormFieldModule, MatInputModule } from '@angular/material'
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { BookSearchComponent } from './core/book-search/book-search.component'
+
+import { HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
@@ -23,7 +27,8 @@ import { MatButtonModule, MatAutocompleteModule, MatChipsModule,
     AppComponent,
     UserLoginComponent,
     UserProfileComponent,
-    HomeComponent
+    HomeComponent,
+    BookSearchComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,9 @@ import { MatButtonModule, MatAutocompleteModule, MatChipsModule,
     AngularFirestoreModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule, MatAutocompleteModule, MatChipsModule, MatIconModule, MatInputModule, MatFormFieldModule
+    MatButtonModule, MatAutocompleteModule, MatInputModule, MatFormFieldModule,
+    ReactiveFormsModule, FormsModule,
+    HttpClientModule
   ],
   providers: [
     AuthService
