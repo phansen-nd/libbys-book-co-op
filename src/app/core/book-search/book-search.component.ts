@@ -26,22 +26,5 @@ export class BookSearchComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-    // this.filteredBookSearchOptions = this.bookSearchFormControl.valueChanges
-    // .pipe(startWith(''), map(value => this.filter(String(value))));
-  }
-
-  // private filter(value: String): Book[] {
-  //   const filterValue = value.toLowerCase();
-  //   this.books.subscribe(books => {
-  //     this.results = books.filter(book => {
-  //       book.title.toLowerCase().includes(filterValue);
-  //       console.log(book);
-  //     });
-  //   });
-    
-  //   console.log("Calling filter with val: " + filterValue + " results: " + this.results);
-  //   return this.results;
-  // }
-
+  ngOnInit() { }
 }

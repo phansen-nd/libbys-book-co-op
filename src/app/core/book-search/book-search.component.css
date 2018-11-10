@@ -1,0 +1,12 @@
+#outer-container {
+    width: 100%;
+}
+
+#search-container {
+    margin: auto;
+    width: fit-content;
+}
+
+.book-results-cont {
+    padding: 7px;
+}

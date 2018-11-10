@@ -12,5 +12,6 @@ export const environment = {
     projectId: "libby-s-book-co-op",
     storageBucket: "libby-s-book-co-op.appspot.com",
     messagingSenderId: "373578804492"
-  }
+  },
+  googleBooksApiKey: "AIzaSyBRwxDWHA3UmGXE51KDREMd8b4qmEXKdOQ"
 };

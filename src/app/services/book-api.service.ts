@@ -5,6 +5,7 @@ import { GoogleBooksApiResponse } from '../objects/google-books-api-response';
 import { GoogleBooksApiItem } from '../objects/google-books-api-item';
 import { Observable } from 'rxjs'
 import { GoogleBooksApiIndustryIdentifiers } from '../objects/google-books-api-industry-identifiers';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class BookApiService {
   private ISBN_10 = "ISBN_10";
   private ISBN_13 = "ISBN_13";
   endpointStart = "https://www.googleapis.com/books/v1/volumes?q=intitle:";
-  apiKey = "AIzaSyBRwxDWHA3UmGXE51KDREMd8b4qmEXKdOQ";
+  apiKey = environment.googleBooksApiKey;
   endpointEnd = "&key=";
 
   constructor(private http: HttpClient) { }
